@@ -1,0 +1,130 @@
+Task 1 to 4
+
+Task 1 and 2 : File System Operations
+Task 3 : Express.js Basics:
+Task 4 : Middleware Implementation
+
+POST : localhost:3800/writeFile
+Body :  {
+  "firstName": "Siva",
+  "lastName": "GN"
+}
+
+GET : localhost:3800/readfile?fullname=SivaGN
+Response : {
+  "status": "Success",
+  "mgs": true
+}
+
+This will logged on console for this two route
+
+Method : POST, URL : /writeFile
+Method : GET, URL : /readfile?fullname=jeekii
+
+**********************************************************************
+
+
+Task 5,7 and 11 
+
+Task 5 : CRUD 
+Task 7 : DB Integration
+Tasl 11 : Middleware validator
+
+GET : localhost:3800/getdata
+Response : {
+  "status": "Success",
+  "msg": [
+    {
+      "_id": "660f6fc40f7ee74a313a1f49",
+      "userName": "sivagn",
+      "email": "test@test.com",
+      "phoneNumber": "9898989898",
+      "__v": 0
+    }
+  ]
+}
+
+POST : localhost:3800/postdata
+Body : {
+  "userName": "Ram",
+  "email": "te@test.com",
+  "phoneNumber": "9898989898"
+}
+Response : {
+  "status": "Success",
+  "msg": {
+    "userName": "Ram",
+    "email": "te@test.com",
+    "phoneNumber": "9898989898",
+    "_id": "660f81903bd189ac5157e214",
+    "__v": 0
+  }
+}
+
+PUT : localhost:3800/update/660f81903bd189ac5157e214
+Body : {
+  "userName": "kumar",
+  "email": "te@test.com",
+  "phoneNumber": "9898989898"
+}
+Response : {
+  "status": "Success",
+  "msg": {
+    "userName": "kumar",
+    "email": "te@test.com",
+    "phoneNumber": "9898989898",
+    "_id": "660f81903bd189ac5157e214",
+    "__v": 0
+  }
+}
+
+DELETE : localhost:3800/delete/660f81903bd189ac5157e214
+Response : { status: "Success", msg: "User deleted" }
+
+Check validator 
+POST : localhost:3800/postdata
+Body : {
+  "userName": "",
+  "email": "te@test.com",
+  "phoneNumber": "9898989898"
+}
+Response :{
+  "status": "Failed",
+  "msg": "Username must not be empty"
+}
+
+**********************************************************************
+
+Task 6 : JWT
+
+GET : localhost:3800/gettoken
+Response : {
+  "status": "Success",
+  "msg": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NjU2IiwiaWF0IjoxNzEyMjkzMDE2LCJleHAiOjE3MTIyOTY2MTZ9.ssnji05yTHWRL9C0eqGX0447vt9BiPt9RfE7NMpYbcA"
+}
+
+GET : localhost:3800/protectedroute
+Header : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NjU2IiwiaWF0IjoxNzEyMjkzMDE2LCJleHAiOjE3MTIyOTY2MTZ9.ssnji05yTHWRL9C0eqGX0447vt9BiPt9RfE7NMpYbcA
+Response :{
+  "status": "Success",
+  "msg": "Token verified"
+}
+
+**********************************************************************
+
+Task 9 :  Asynchronous Control Flow
+
+GET : localhost:3800/asyncfetch
+Response : {
+  "status": "Success",
+  "msg": "Async result after 3second"
+}
+
+**********************************************************************
+
+Task 8 and 10
+
+Task 8 : Error Handling and Logging:
+Task 10 : Scheduled Tasks with Node.js Cron 
+
+use can verify the app.js for Implementaion and middlewares
