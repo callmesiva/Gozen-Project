@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useData } from "./context";
+import { useData } from "./Context";
 
 const ChildComponent = () => {
   const { data, setData } = useData();

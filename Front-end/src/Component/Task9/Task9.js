@@ -1,5 +1,5 @@
 import React from "react";
-import { useData } from "./context";
+import { useData } from "./Context";
 import Child from "../Task9/Child";
 
 const Task9 = () => {
