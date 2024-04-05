@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { DataProvider } from "./Component/Task9/context";
+import { DataProvider } from "./Component/Task9/Context";
 import ErrorBoundary from "./Component/Task11/ErrorBoundary";
 import Error from "./Component/Task11/Error";
 import ProtectedRoute from "./Component/Task12/ProtectedRoute";
